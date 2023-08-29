@@ -1,0 +1,78 @@
+Первая часть первого  ДЗ  ))
+Linux terminal (GitBash) commands
+1) Посмотреть где я  
+Pwd
+
+2) Создать папку  
+mkdir foldername
+
+3) Зайти в папку 
+cd foldername
+
+4) Создать 3 папки
+Mkdir folder_1 folder_2 folder_3
+
+5) Зайти в любоую папку
+cd folder_1
+
+6) Создать 5 файлов (3 txt, 2 json)
+touch 1.txt 2.txt 3.txt 4.json 5.json 
+
+7) Создать 3 папки
+mkdir folder1 folder2 folder3 
+
+8) Вывести список содержимого папки
+ls -la
+
+9) + Открыть любой txt файл
+10) + написать туда что-нибудь, любой текст.
+11) + сохранить и выйти.
+1.	Cat >> 1.txt 111 ctrl+c
+2.	Vim 1.txt 222 esc :wq
+3.	Nano 1.txt 333 ctrl+o ctrl+x
+
+12) Выйти из папки на уровень выше
+cd ..
+
+13) переместить любые 2 файла, которые вы создали, в любую другую папку.
+mv 4.json 5.json ./folder1
+
+14) скопировать любые 2 файла, которые вы создали, в любую другую папку.
+cp 1.txt 2.txt ./folder2
+
+15) Найти файл по имени
+find -name 1.txt
+
+16) просмотреть содержимое в реальном времени (команда grep) изучите как она работает.
+tail -f name_file | grep name_search
+
+17) вывести несколько(n) первых строк из текстового файла
+head -n 1.txt
+
+18) вывести несколько последних строк из текстового файла
+tail -n 1.txt
+
+19) просмотреть содержимое длинного файла (команда less) изучите как она работает.
+less 1.txt
+
+20) вывести дату и время
+Date
+
+Задание *
+1) Отправить http запрос на сервер.
+curl http://162.55.220.72:5005/terminal-hw-request
+
+2) Написать скрипт который выполнит автоматически пункты 3, 4, 5, 6, 7, 8, 13
+touch script.sh
+cat >>script.sh
+#!/usr/bin/bash
+mkdir 1
+cd 1
+mkdir 1_new 2_new 3_new
+cd 1_new
+touch 1.txt 2.txt 3.txt 4.json 5.json
+mkdir folder1 folder2 folder3
+ls -la
+mv 1.txt 2.txt ./folder1
+bash script.sh
+
